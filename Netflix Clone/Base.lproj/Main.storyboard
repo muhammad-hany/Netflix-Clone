@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Td-Ir-PVf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Netflix_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PNb-DL-JzF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="6xk-zJ-azb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="324"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainPoster" translatesAutoresizingMaskIntoConstraints="NO" id="irz-Ya-ONZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="324"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="LV4-ZM-2DY">
+                                            <rect key="frame" x="64" y="276" width="286" height="31"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idh-Uj-Fuw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80.5" height="31"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Play" cornerStyle="small">
+                                                        <backgroundConfiguration key="background">
+                                                            <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </backgroundConfiguration>
+                                                        <color key="baseBackgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ1-kY-tBT">
+                                                    <rect key="frame" x="205.5" y="0.0" width="80.5" height="31"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Dowload" cornerStyle="small">
+                                                        <backgroundConfiguration key="background">
+                                                            <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </backgroundConfiguration>
+                                                        <color key="baseBackgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="irz-Ya-ONZ" secondAttribute="trailing" id="U7E-gW-jML"/>
+                                        <constraint firstAttribute="bottom" secondItem="irz-Ya-ONZ" secondAttribute="bottom" id="Z2P-kE-y47"/>
+                                        <constraint firstItem="LV4-ZM-2DY" firstAttribute="centerX" secondItem="6xk-zJ-azb" secondAttribute="centerX" id="bWa-kp-nRs"/>
+                                        <constraint firstItem="irz-Ya-ONZ" firstAttribute="leading" secondItem="6xk-zJ-azb" secondAttribute="leading" id="idP-Wk-p9E"/>
+                                        <constraint firstItem="irz-Ya-ONZ" firstAttribute="top" secondItem="6xk-zJ-azb" secondAttribute="top" id="mdC-31-rzG"/>
+                                        <constraint firstItem="LV4-ZM-2DY" firstAttribute="centerY" secondItem="6xk-zJ-azb" secondAttribute="centerY" multiplier="1.8" id="vEU-Qb-EZm"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="featuredCell" id="2dr-SI-Nj4" userLabel="featured collection cell" customClass="CollectionTableViewCell" customModule="Netflix_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="368.5" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2dr-SI-Nj4" id="8UT-mY-eZd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f9L-ZT-h4C">
+                                                    <rect key="frame" x="20" y="11" width="374" height="178"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="09R-e1-ZM0">
+                                                        <size key="itemSize" width="150" height="182"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="hOi-1X-OOo" customClass="CollectionItemCell" customModule="Netflix_Clone" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="-1" width="150" height="180"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SkK-ak-l1L">
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALw-T7-PHa">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="180" id="99t-I1-A3G"/>
+                                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="JA4-vr-A8M"/>
+                                                                            <constraint firstAttribute="width" constant="150" id="cfB-cj-PFp"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="ALw-T7-PHa" secondAttribute="bottom" id="Hpj-Ra-4de"/>
+                                                                    <constraint firstItem="ALw-T7-PHa" firstAttribute="top" secondItem="SkK-ak-l1L" secondAttribute="top" id="JsT-6Q-KfL"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="ALw-T7-PHa" secondAttribute="trailing" id="bQN-BP-RSC"/>
+                                                                    <constraint firstItem="ALw-T7-PHa" firstAttribute="leading" secondItem="SkK-ak-l1L" secondAttribute="leading" id="dPm-CD-c9h"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                            <color key="tintColor" systemColor="systemBrownColor"/>
+                                                            <size key="customSize" width="150" height="180"/>
+                                                            <connections>
+                                                                <outlet property="cellNumberText" destination="ALw-T7-PHa" id="X6E-uq-Jev"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="f9L-ZT-h4C" firstAttribute="leading" secondItem="8UT-mY-eZd" secondAttribute="leadingMargin" id="7QL-Ev-UIr"/>
+                                                <constraint firstItem="f9L-ZT-h4C" firstAttribute="top" secondItem="8UT-mY-eZd" secondAttribute="topMargin" id="Lcw-GK-JMt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="f9L-ZT-h4C" secondAttribute="bottom" id="OJj-2S-FuE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="f9L-ZT-h4C" secondAttribute="trailing" id="hZK-Mm-dyk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="featuredCollectionView" destination="f9L-ZT-h4C" id="nQC-US-TfT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PNb-DL-JzF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6zG-KC-7MN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PNb-DL-JzF" secondAttribute="bottom" id="VIt-uc-UiL"/>
+                            <constraint firstItem="PNb-DL-JzF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YBH-Mn-U3D"/>
+                            <constraint firstItem="PNb-DL-JzF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ef6-wy-LPS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wbb-pI-hF3">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="fYI-cp-o8n">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4U7-HX-iEr" userLabel="HomeButton">
+                                <rect key="frame" x="20" y="5" width="76.5" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="            ">
+                                    <backgroundConfiguration key="background" image="netflix" imageContentMode="scaleAspectFit"/>
+                                </buttonConfiguration>
+                            </button>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" style="plain" id="2Jg-EJ-QxO">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ou3-dD-t3e">
+                                    <rect key="frame" x="346" y="5" width="48" height="34.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="person" catalog="system" title=""/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem title="Item" style="plain" id="tDO-hY-zRi">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kiF-2q-W68">
+                                    <rect key="frame" x="283.5" y="5" width="54.5" height="34.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="play.rectangle" catalog="system" title=""/>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeImageView" destination="irz-Ya-ONZ" id="ZuT-Xu-1Uy"/>
+                        <outlet property="navBarButton" destination="fYI-cp-o8n" id="OYl-AV-VhH"/>
+                        <outlet property="tableView" destination="PNb-DL-JzF" id="qtb-gl-cxX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.130434782608695" y="-517.63392857142856"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Guk-4w-LCm">
+            <objects>
+                <viewController id="Kxg-zJ-vtV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cLB-E8-b8A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OX-mt-lNF">
+                                <rect key="frame" x="166" y="213" width="81" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="netflix" imageContentMode="scaleAspectFit">
+                                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                        <color key="strokeColor" systemColor="linkColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3vK-qD-ZqY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="tKZ-Bn-iOw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqB-cF-ahq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-949.27536231884062" y="170.75892857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="g6L-zZ-DTE">
+            <objects>
+                <tabBarController id="5Td-Ir-PVf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IC1-mV-0Tj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kC5-eS-AtL" kind="relationship" relationship="viewControllers" id="x8t-Mz-FJb"/>
+                        <segue destination="Kxg-zJ-vtV" kind="relationship" relationship="viewControllers" id="997-vN-Ld6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0lP-M6-ugm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1870" y="-373"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="DXq-4r-ImB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kC5-eS-AtL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="a1z-Y8-aVq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ZI-gI-n08">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6Tm-ms-Afl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4EG-q8-POL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-949.27536231884062" y="-517.63392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="mainPoster" width="1396" height="1982"/>
+        <image name="netflix" width="34" height="62"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="play.rectangle" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
