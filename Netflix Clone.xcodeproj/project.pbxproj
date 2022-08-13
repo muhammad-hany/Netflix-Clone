@@ -15,7 +15,7 @@
 		52A378DA28A5653600A79F10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A378D828A5653600A79F10 /* LaunchScreen.storyboard */; };
 		52A378EC28A58BF900A79F10 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A378EB28A58BF900A79F10 /* CollectionTableViewCell.swift */; };
 		52A378EE28A58D9E00A79F10 /* CollectionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A378ED28A58D9E00A79F10 /* CollectionItemCell.swift */; };
-		52A378F528A6B42A00A79F10 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A378F428A6B42A00A79F10 /* GradientView.swift */; };
+		52A3791728A7AF5800A79F10 /* CustomTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3791628A7AF5800A79F10 /* CustomTableHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		52A378DB28A5653600A79F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52A378EB28A58BF900A79F10 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		52A378ED28A58D9E00A79F10 /* CollectionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItemCell.swift; sourceTree = "<group>"; };
-		52A378F428A6B42A00A79F10 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		52A3791628A7AF5800A79F10 /* CustomTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,26 +62,18 @@
 		52A378CC28A5653500A79F10 /* Netflix Clone */ = {
 			isa = PBXGroup;
 			children = (
-				52A378F328A6B40F00A79F10 /* cutom views */,
 				52A378CD28A5653500A79F10 /* AppDelegate.swift */,
 				52A378CF28A5653500A79F10 /* SceneDelegate.swift */,
 				52A378D128A5653500A79F10 /* ViewController.swift */,
 				52A378EB28A58BF900A79F10 /* CollectionTableViewCell.swift */,
 				52A378ED28A58D9E00A79F10 /* CollectionItemCell.swift */,
+				52A3791628A7AF5800A79F10 /* CustomTableHeaderView.swift */,
 				52A378D328A5653500A79F10 /* Main.storyboard */,
 				52A378D628A5653600A79F10 /* Assets.xcassets */,
 				52A378D828A5653600A79F10 /* LaunchScreen.storyboard */,
 				52A378DB28A5653600A79F10 /* Info.plist */,
 			);
 			path = "Netflix Clone";
-			sourceTree = "<group>";
-		};
-		52A378F328A6B40F00A79F10 /* cutom views */ = {
-			isa = PBXGroup;
-			children = (
-				52A378F428A6B42A00A79F10 /* GradientView.swift */,
-			);
-			path = "cutom views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +149,8 @@
 			files = (
 				52A378EE28A58D9E00A79F10 /* CollectionItemCell.swift in Sources */,
 				52A378D228A5653500A79F10 /* ViewController.swift in Sources */,
-				52A378F528A6B42A00A79F10 /* GradientView.swift in Sources */,
 				52A378CE28A5653500A79F10 /* AppDelegate.swift in Sources */,
+				52A3791728A7AF5800A79F10 /* CustomTableHeaderView.swift in Sources */,
 				52A378D028A5653500A79F10 /* SceneDelegate.swift in Sources */,
 				52A378EC28A58BF900A79F10 /* CollectionTableViewCell.swift in Sources */,
 			);

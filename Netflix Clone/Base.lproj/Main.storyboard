@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PNb-DL-JzF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PNb-DL-JzF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="6xk-zJ-azb">
@@ -28,11 +28,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="324"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="LV4-ZM-2DY">
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="86" translatesAutoresizingMaskIntoConstraints="NO" id="LV4-ZM-2DY">
                                             <rect key="frame" x="64" y="276" width="286" height="31"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idh-Uj-Fuw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80.5" height="31"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="86l-yD-p9I"/>
+                                                    </constraints>
                                                     <buttonConfiguration key="configuration" style="filled" title="Play" cornerStyle="small">
                                                         <backgroundConfiguration key="background">
                                                             <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,7 +44,10 @@
                                                     </buttonConfiguration>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ1-kY-tBT">
-                                                    <rect key="frame" x="205.5" y="0.0" width="80.5" height="31"/>
+                                                    <rect key="frame" x="186" y="0.0" width="100" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="7q6-Vg-Idm"/>
+                                                    </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Dowload" cornerStyle="small">
                                                         <backgroundConfiguration key="background">
@@ -55,17 +61,17 @@
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
+                                        <constraint firstItem="LV4-ZM-2DY" firstAttribute="centerY" secondItem="6xk-zJ-azb" secondAttribute="centerY" multiplier="1.8" id="Twc-3X-C59"/>
                                         <constraint firstAttribute="trailing" secondItem="irz-Ya-ONZ" secondAttribute="trailing" id="U7E-gW-jML"/>
                                         <constraint firstAttribute="bottom" secondItem="irz-Ya-ONZ" secondAttribute="bottom" id="Z2P-kE-y47"/>
                                         <constraint firstItem="LV4-ZM-2DY" firstAttribute="centerX" secondItem="6xk-zJ-azb" secondAttribute="centerX" id="bWa-kp-nRs"/>
                                         <constraint firstItem="irz-Ya-ONZ" firstAttribute="leading" secondItem="6xk-zJ-azb" secondAttribute="leading" id="idP-Wk-p9E"/>
                                         <constraint firstItem="irz-Ya-ONZ" firstAttribute="top" secondItem="6xk-zJ-azb" secondAttribute="top" id="mdC-31-rzG"/>
-                                        <constraint firstItem="LV4-ZM-2DY" firstAttribute="centerY" secondItem="6xk-zJ-azb" secondAttribute="centerY" multiplier="1.8" id="vEU-Qb-EZm"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="featuredCell" id="2dr-SI-Nj4" userLabel="featured collection cell" customClass="CollectionTableViewCell" customModule="Netflix_Clone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="368.5" width="414" height="200"/>
+                                        <rect key="frame" x="0.0" y="373.5" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2dr-SI-Nj4" id="8UT-mY-eZd">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
@@ -235,7 +241,7 @@
         <!--Home-->
         <scene sceneID="DXq-4r-ImB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kC5-eS-AtL" sceneMemberID="viewController">
+                <navigationController id="kC5-eS-AtL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="a1z-Y8-aVq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ZI-gI-n08">
@@ -243,6 +249,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z8M-g3-gRM">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6Tm-ms-Afl"/>
                     </connections>
